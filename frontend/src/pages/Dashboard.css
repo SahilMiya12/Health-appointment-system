@@ -1,0 +1,142 @@
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 32px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.welcome-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-greeting {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.welcome-message {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.view-appointments-btn {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 12px 28px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.view-appointments-btn:hover {
+  background: white;
+  color: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.welcome-stats .stat-circle {
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.stat-circle .stat-number {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.stat-circle .stat-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Stats Grid Enhanced */
+.stats-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card-enhanced {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card-enhanced:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.stat-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-info-enhanced {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 32px
